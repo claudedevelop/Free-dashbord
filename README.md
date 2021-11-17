@@ -1,4 +1,5 @@
-# Free-dashbord is a dashboard template for PC!  I didn't consider mobile because I don't find it ideal to run a site from a smartphone.  For the moment it is only one page which is made, the entry page on the administration panel.  But this can be changed at any time.  I can add more pages over time until I have a full admin panel.
+# Free-dashbord is a dashboard template for PC! 
+I didn't consider mobile because I don't find it ideal to run a site from a smartphone.  For the moment it is only one page which is made, the entry page on the administration panel.  But this can be changed at any time.  I can add more pages over time until I have a full admin panel.
 
  Apart from HTML and CSS, all that is left are libraries and frameworks that I used.
  To understand the JavaScript that is at the footer, I invite you to read the CharterJs documentation.
