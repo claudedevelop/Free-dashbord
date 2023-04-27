@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!--
+    Auteur : FASSINOU CLAUDE
+    Profession : Développeur web
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Light dashboard FreeFrontend Code</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Chart.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm text-light bg-basic fixed-top border-top">
+        <a class="navbar-brand" href="#">Claudy</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="#">Action 1</a>
+                        <a class="dropdown-item" href="#">Action 2</a>
+                    </div>
+                </li>
+
+                <li class="nav-item btn-group dropleft">
+                    <a class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-comments" aria-hidden="true"></i> <sup class="badge badge-pill badge-danger">20</sup>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Action</a>
+                    </div>
+                </li>
+                <li class="nav-item btn-group dropleft nofications">
+                    <a class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-bell" aria-hidden="true"></i> <sup class="badge badge-pill badge-danger">99+</sup>
+                    </a>
+                    <div class="dropdown-menu">
+                        <h4 class="dropdown-item mt-0">Nouvelles notifications</h4>
+                        <a class="dropdown-item" href="#">
+                            <img src="images/default-avatar.png" alt="">
+                            <span>Claudy vient de se désabonner</span><br>
+                            <span class="text-mutee">A l'instant</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <img src="images/avataaars.png" alt="">
+                            <span>Jeanne a mentionné votre nom</span>
+                            <br>
+                            <span class="text-mutee">Il y a 30min.</span>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <img src="images/anime3.png" alt="">
+                            <span>John Doe a signalé un problème</span> <br>
+                            <span class="text-mutee">Il y a 2h.</span>
+                        </a>
+                        <div class="dropdown-divider "></div>
+                        <center><a class="dropdown-item" href="#"><button type="button" class="btn btn-info">Toutes les nofifications</button></a></center>
+
+                    </div>
+                </li>
+                <li class="nav-item btn-group dropleft">
+                    <a class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-shopping-cart"></i><sup class="badge badge-pill badge-danger">91</sup>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Action</a>
+                    </div>
+                </li>
+                <li class="nav-item btn-group dropleft">
+                    <a class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-calendar-alt    "></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Action</a>
+                    </div>
+                </li>
+                <li class="nav-item btn-group dropleft">
+                    <a class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="images/anime6.png" alt="" class="avatar rounded-circle mx-auto d-block">
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Action</a>
+                    </div>
+                </li>
+                <li class="nav-item btn-group dropleft">
+                    <a class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <form class="dropdown-item">
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" name="darkMode" id="" value="checkedValue"> Mode sombre
+                            </label>
+                            </div>
+                        </form>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Action</a>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+    <div class="wrapper ">
+        <div class="sideMenu ">
+            <div class="sidebar ">
+                <ul class="nav justify-content-center flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active dropBtn" href="#">
+                            <span class="angle"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                            <i class="fa fa-qrcode" aria-hidden="true"></i>
+                            <span>Dashboard</span>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="">Liens vers une page donnée</a>
+                            <a href="">Liens vers une autre page donnée</a>
+                            <a href="">Liens vers une autre autre page donnée</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dropBtn" href="#">
+                            <span class="angle"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                            <i class="fas fa-chart-line    "></i>
+                            <span> Activités</span>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="">Les dernières activités</a>
+                            <a href="">Lien vers pages d'activités.</a>
+                            <a href="">Lien vers une pages d'activités.</a>
+                            <a href="">Lien vers pages d'activités.</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link dropBtn">
+                            <span class="angle"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                            <i class="fas fa-users"></i>
+                            <span>Utilisateurs</span>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="">Modifier</a>
+                            <a href="">Récents</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link dropBtn">
+                            <span class="angle"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                            <i class="fa fa-book" aria-hidden="true"></i>
+                            <span>Pages</span>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="">Like ours eeh...</a>
+                            <a href="">Like oqojo ..</a>
+                            <a href="">Like jsgss ..</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link dropBtn">
+                            <span class="angle"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                            <span>Visites</span>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="">Like ours eeh...</a>
+                            <a href="">Like oqojo ..</a>
+                            <a href="">Like jsgss ..</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link dropBtn">
+                            <span class="angle"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                            <i class="fas fa-download    "></i>
+                            <span>Téléchargements</span>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="">Like ours eeh...</a>
+                            <a href="">Like oqojo ..</a>
+                            <a href="">Like jsgss ..</a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="content ">
+            <div class="task-bar top-navbar">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">Acceuil</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Action</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Another link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link disabled">Disabled</a>
+                    </li>
+
+                    <form class="ml-auto nav-item form-inline my-2 my-lg-0 pr-4">
+                        <div class="input-group bg-mi-transparent border-rad-normal">
+
+                            <div class="input-group-append">
+                                <input type="text" class="border-left-normal bg-mi-transparent border-none">
+                            </div>
+                            <button class="input-group-text bg-transparent border-none"><i class="fas fa-search text-light  "></i></button>
+                        </div>
+                    </form>
+                </ul>
+            </div>
+            <main>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="top-group-btn">
+                                <div class="card-header">
+                                    <h4 class="text-center">Créer</h4>
+                                    <div class="create-btn">
+                                        <div class="input-group bg-mi-transparent border-rad-normal">
+                                            <button class="input-group-text bg-transparent border-none"><i class="fas fa-bullhorn"></i></button>
+                                            <div class="input-group-prepend">
+                                                <a href="" class="bg-mi-transparent border-none border-rigth-normal">Promotion</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="create-btn">
+                                        <div class="input-group bg-mi-transparent border-rad-normal">
+                                            <button class="input-group-text bg-transparent border-none"><i class="fas fa-video    "></i></button>
+                                            <div class="input-group-prepend">
+                                                <a href="" class="bg-mi-transparent border-none border-rigth-normal">Créer</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="create-btn">
+                                        <div class="input-group bg-mi-transparent border-rad-normal">
+                                            <button class="input-group-text bg-transparent border-none"><i class="fas fa-calendar-plus    "></i></button>
+                                            <div class="input-group-prepend">
+                                                <a href="" class="bg-mi-transparent border-none border-rigth-normal">Evenéments</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="create-btn">
+                                        <div class="input-group bg-mi-transparent border-rad-normal">
+                                            <button class="input-group-text bg-transparent border-none"><i class="fa fa-gift" aria-hidden="true"></i></button>
+                                            <div class="input-group-prepend">
+                                                <a href="" class="bg-mi-transparent border-none border-rigth-normal">Concours</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-3 dashboard-card">
+                        <div class="col-md-4">
+                            <div class="card text-left">
+
+                                <div class="card-body">
+                                    <h4 class="card-title">Les visites</h4>
+                                    <canvas id="first-demo" width="400" height="400"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card text-left">
+
+                                <div class="card-body">
+                                    <h4 class="card-title">Click depuis les moteurs</h4>
+                                    <canvas id="second-demo" width="400" height="400"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card text-left">
+
+                                <div class="card-body">
+                                    <h4 class="card-title">Les nouelles inscrits</h4>
+                                    <canvas id="third-demo" width="400" height="400"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row my-3 dashboard-card">
+                        <div class="col-md-4">
+                            <div class="card text-left">
+
+                                <div class="card-body">
+                                    <h4 class="card-title">Affluences sur le site</h4>
+                                    <canvas id="four-demo" width="400" height="400"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card text-left">
+
+                                <div class="card-body">
+                                    <h4 class="card-title">Utilisateurs connectés</h4>
+                                    <canvas id="five-demo" width="400" height="400"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card text-left">
+
+                                <div class="card-body">
+                                    <h4 class="card-title">Les nouelles inscrits</h4>
+                                    <canvas id="six-demo" width="400" height="400"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <footer class="container-fluid mt-3">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <p>Copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2020
+                                <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fm.me%2Fclaudy.web.927%3Ffbclid%3DIwAR0QJjF-afgQC5CzX982GkR9uvxdmBnlzNwNnNgcgCvipDRYrQBtTlfVwYg&h=AT3JEoVW9EfW26Ofa22CyUqH3RCP4-mIY7FqHb2UM4qSuc7FKreLjYCLCOKLQMYglKLt_v-zvPCY2Zj21W6rr4NWvQSzyw0gYEK8TpFR629j1ruBU1j3zWmE-ufToRvALomKhQ">Claudy</a>                                | <a href="https://www.sgtic.bj/" title="Là où je travaille actuellement">SGTIC</a> , <a href="https://web.facebook.com/hwdigitgroup" title="La page sur lequelle je vais commecer par publier mes oeuvres et celles de mes amis">HW-DIGITGROUP</a>
+                                <Strong>Licence : MIT</Strong> </p>
+                        </div>
+                    </div>
+                </footer>
+            </main>
+            <div class="task-bar bottom-navbar">
+                <ul class="nav nav-tabs justify-content-end">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active-color " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-home"></i>
+                        </a>
+
+                    </li>
+                    <li class="nav-item dropdown droptop">
+                        <a class="nav-link color-basic  dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">admin</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Action</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-angle-up" aria-hidden="true"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Action</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Action</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown pr-3">
+                        <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-cog" aria-hidden="true"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Action</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.4.1.min.js "></script>
+    <script src="js/popper.min.js "></script>
+    <script src="js/bootstrap.min.js "></script>
+    <script src="js/all.js "></script>
+    <script src="js/Chart.js"></script>
+    <script>
+        $(function() {
+            var dropBtn = $('.dropBtn');
+
+            for (let i = 0; i < dropBtn.length; i++) {
+                const element = dropBtn[i];
+                $(element).on('click', function() {
+                    const angle = $(element).children('.angle');
+                    $(angle).toggleClass('k90deg');
+                    $(element).siblings().toggle()
+                });
+            };
+
+        });
+    </script>
+
+    <script>
+        var first = document.getElementById('first-demo').getContext('2d');
+        var firstCart = new Chart(first, {
+            type: 'line',
+            data: {
+                labels: ['Lundi', 'Mardi', 'Mercredi', ' Jeudi', 'Vendredi', 'Samedi', 'Dimanche'],
+                datasets: [{
+                    label: 'Cette semaine',
+                    data: [5, 16, 18, 30, 20, 37, 43],
+                    backgroundColor: [
+                        'rgba(255,15,14,0.1)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(155,115,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(55,15,255,0.5)'
+                    ],
+                    borderColor: [
+                        'rgba(55,205,254,1)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+
+        var second = document.getElementById('second-demo').getContext('2d');
+        var secondChart = new Chart(second, {
+            type: 'doughnut',
+            data: {
+                labels: ['Lundi', 'Mardi', 'Mercredi', ' Jeudi', 'Vendredi', 'Samedi', 'Dimanche'],
+                datasets: [{
+                    label: 'Cette semaine',
+                    data: [5, 16, 18, 30, 20, 37, 43],
+                    backgroundColor: [
+                        'rgba(255,150,140,1)',
+                        'rgba(55,115,114,1)',
+                        'rgba(255,15,104,1)',
+                        'rgba(55,15,205,1)',
+                        'rgba(255,105,14,1)',
+                        'rgba(20,205,202,1)',
+                        'rgba(15,255,20,1)'
+                    ],
+                    borderColor: [
+                        'rgba(55,205,254,1)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+
+        var third = document.getElementById('third-demo').getContext('2d');
+        var thirdChart = new Chart(third, {
+            type: 'pie',
+            data: {
+                labels: ['Lundi', 'Mardi', 'Mercredi', ' Jeudi', 'Vendredi', 'Samedi', 'Dimanche'],
+                datasets: [{
+                    label: 'Cette semaine',
+                    data: [5, 16, 18, 30, 20, 37, 43],
+                    backgroundColor: [
+                        'rgba(255,15,14,0.1)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(155,115,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(55,15,255,0.5)'
+                    ],
+                    borderColor: [
+                        'rgba(55,205,254,1)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+
+        var four = document.getElementById('four-demo').getContext('2d');
+        var fourChart = new Chart(four, {
+            type: 'bar',
+            data: {
+                labels: ['Lundi', 'Mardi', 'Mercredi', ' Jeudi', 'Vendredi', 'Samedi', 'Dimanche'],
+                datasets: [{
+                    label: 'Cette semaine',
+                    data: [5, 16, 18, 30, 20, 37, 43],
+                    backgroundColor: [
+                        'rgba(255,15,14,0.1)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(155,115,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(55,15,255,0.5)'
+                    ],
+                    borderColor: [
+                        'rgba(55,205,254,1)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+
+        var five = document.getElementById('five-demo').getContext('2d');
+        var fiveChart = new Chart(five, {
+            type: 'polarArea',
+            data: {
+                labels: ['Lundi', 'Mardi', 'Mercredi', ' Jeudi', 'Vendredi', 'Samedi', 'Dimanche'],
+                datasets: [{
+                    label: 'Cette semaine',
+                    data: [5, 16, 18, 30, 20, 37, 43],
+                    backgroundColor: [
+                        'rgba(255,15,14,0.1)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(155,115,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(55,15,255,0.5)'
+                    ],
+                    borderColor: [
+                        'rgba(55,205,254,1)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+
+        var six = document.getElementById('six-demo').getContext('2d');
+        var sixChart = new Chart(six, {
+            type: 'radar',
+            data: {
+                labels: ['Lundi', 'Mardi', 'Mercredi', ' Jeudi', 'Vendredi', 'Samedi', 'Dimanche'],
+                datasets: [{
+                    label: 'Cette semaine',
+                    data: [5, 16, 18, 30, 20, 37, 43],
+                    backgroundColor: [
+                        'rgba(255,15,14,0.1)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(155,115,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(55,15,255,0.5)'
+                    ],
+                    borderColor: [
+                        'rgba(55,205,254,1)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+                        'rgba(255,15,14,0.5)',
+
+                    ],
+                    borderWidth: 1
+
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
